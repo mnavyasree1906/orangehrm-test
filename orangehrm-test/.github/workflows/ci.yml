@@ -1,4 +1,5 @@
 name: CI Workflow for TestNG
+
 on:
   push:
     branches:
