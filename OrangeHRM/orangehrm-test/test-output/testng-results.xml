@@ -2,30 +2,30 @@
 <testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-12-17T21:26:30 IST" name="TestSuite" finished-at="2024-12-17T21:27:04 IST" duration-ms="34301">
+  <suite started-at="2024-12-17T22:16:30 IST" name="TestSuite" finished-at="2024-12-17T22:17:04 IST" duration-ms="33864">
     <groups>
     </groups>
-    <test started-at="2024-12-17T21:26:30 IST" name="AllTests" finished-at="2024-12-17T21:27:04 IST" duration-ms="34301">
+    <test started-at="2024-12-17T22:16:30 IST" name="AllTests" finished-at="2024-12-17T22:17:04 IST" duration-ms="33864">
       <class name="tests.LoginTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.LoginTest@6f3c660a]" started-at="2024-12-17T21:26:30 IST" name="setup" finished-at="2024-12-17T21:26:39 IST" duration-ms="8419" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.LoginTest@460ebd80]" started-at="2024-12-17T22:16:30 IST" name="setup" finished-at="2024-12-17T22:16:37 IST" duration-ms="6972" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testValidLogin()[pri:0, instance:tests.LoginTest@6f3c660a]" started-at="2024-12-17T21:26:39 IST" name="testValidLogin" finished-at="2024-12-17T21:26:44 IST" duration-ms="5731" status="PASS">
+        <test-method signature="testValidLogin()[pri:0, instance:tests.LoginTest@460ebd80]" started-at="2024-12-17T22:16:37 IST" name="testValidLogin" finished-at="2024-12-17T22:16:43 IST" duration-ms="6481" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testValidLogin -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:tests.LoginTest@6f3c660a]" started-at="2024-12-17T21:26:45 IST" name="teardown" finished-at="2024-12-17T21:26:45 IST" duration-ms="442" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:tests.LoginTest@460ebd80]" started-at="2024-12-17T22:16:44 IST" name="teardown" finished-at="2024-12-17T22:16:44 IST" duration-ms="483" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- tests.LoginTest -->
       <class name="tests.UserManagementTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.UserManagementTest@51acdf2e]" started-at="2024-12-17T21:26:45 IST" name="setup" finished-at="2024-12-17T21:26:47 IST" duration-ms="2076" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.UserManagementTest@dbd8e44]" started-at="2024-12-17T22:16:44 IST" name="setup" finished-at="2024-12-17T22:16:46 IST" duration-ms="2150" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testAddNewUser()[pri:0, instance:tests.UserManagementTest@51acdf2e]" started-at="2024-12-17T21:26:47 IST" name="testAddNewUser" finished-at="2024-12-17T21:27:04 IST" duration-ms="16584" status="FAIL">
+        <test-method signature="testAddNewUser()[pri:0, instance:tests.UserManagementTest@dbd8e44]" started-at="2024-12-17T22:16:46 IST" name="testAddNewUser" finished-at="2024-12-17T22:17:03 IST" duration-ms="17101" status="FAIL">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//a[@href='#/admin/viewSystemUsers']//span[1]"}
@@ -34,9 +34,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.27.0', revision: 'd6e718d'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [bbeb487c62b01db63dde46ce31497c9f, findElement {using=xpath, value=//a[@href='#/admin/viewSystemUsers']//span[1]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.140, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\Users\Lenovo\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64954}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64954/devtoo..., se:cdpVersion: 131.0.6778.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: bbeb487c62b01db63dde46ce31497c9f]]>
+Command: [45e6f990adb3cd5c0ce8d9af2ee71142, findElement {value=//a[@href='#/admin/viewSystemUsers']//span[1], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.140, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\Users\Lenovo\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50176}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50176/devtoo..., se:cdpVersion: 131.0.6778.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 45e6f990adb3cd5c0ce8d9af2ee71142]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[@href='#/admin/viewSystemUsers']//span[1]"}
@@ -45,9 +45,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.27.0', revision: 'd6e718d'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [bbeb487c62b01db63dde46ce31497c9f, findElement {using=xpath, value=//a[@href='#/admin/viewSystemUsers']//span[1]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.140, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\Users\Lenovo\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64954}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64954/devtoo..., se:cdpVersion: 131.0.6778.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: bbeb487c62b01db63dde46ce31497c9f
+Command: [45e6f990adb3cd5c0ce8d9af2ee71142, findElement {value=//a[@href='#/admin/viewSystemUsers']//span[1], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.140, chrome: {chromedriverVersion: 131.0.6778.108 (3b014839fbc..., userDataDir: C:\Users\Lenovo\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50176}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50176/devtoo..., se:cdpVersion: 131.0.6778.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 45e6f990adb3cd5c0ce8d9af2ee71142
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -100,7 +100,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAddNewUser -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:tests.UserManagementTest@51acdf2e]" started-at="2024-12-17T21:27:04 IST" name="teardown" finished-at="2024-12-17T21:27:04 IST" duration-ms="474" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:tests.UserManagementTest@dbd8e44]" started-at="2024-12-17T22:17:03 IST" name="teardown" finished-at="2024-12-17T22:17:04 IST" duration-ms="395" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
