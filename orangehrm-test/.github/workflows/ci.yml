@@ -8,6 +8,7 @@ on:
     branches:
       - main  # Runs on pull requests to the main branch
 
+
 jobs:
   build:
     runs-on: ubuntu-latest  # Using Ubuntu as the runner OS (can be changed to macOS or Windows)
