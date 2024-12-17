@@ -17,28 +17,22 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
-      # Step 2: Set up JDK (Java 11)
+      # Step 2: Set up JDK (Java 11) with distribution specified
       - name: Set up JDK
         uses: actions/setup-java@v3
         with:
-          java-version: '11'
-          distribution: 'temurin'  # Correct distribution
+          java-version: '11'           # Specify Java version
+          distribution: 'temurin'      # Specify JDK distribution (temurin from Adoptium)
 
-      # Step 3: Set up Maven separately (Maven setup is not part of actions/setup-java)
-      - name: Set up Maven
-        uses: actions/setup-java@v3  # You can also use actions/setup-maven if needed
-        with:
-          java-version: '11'
-        
-      # Step 4: Install dependencies and run TestNG tests using Maven
-      - name: Build and Run Tests
+      # Step 3: Run Maven to build and test
+      - name: Build and Run Tests with Maven
         run: |
-          mvn clean install
-          mvn test
+          mvn clean install           # Install dependencies
+          mvn test                    # Run tests using TestNG (Ensure testng.xml is configured)
 
-      # Step 5: Upload test results as artifacts
+      # Step 4: Upload test results as artifacts
       - name: Upload Test Results
         uses: actions/upload-artifact@v3
         with:
           name: test-results
-          path: target/surefire-reports/  # Adjust path to where your test reports are stored
+          path: target/surefire-reports/  # Path to test results (ensure this matches your setup)
