@@ -22,15 +22,9 @@ jobs:
       uses: actions/setup-java@v3
       with:
         java-version: '11'
-        distribution: 'adoptopenjdk'  # or 'adoptium'
+        distribution: 'adoptium'  # Use 'adoptium' instead of 'adoptopenjdk'
 
     # Install dependencies using Maven (change directory to where your pom.xml is)
-    - name: Set up Maven
-      uses: actions/setup-java@v3
-      with:
-        java-version: '11'
-        distribution: 'adoptopenjdk'
-    
     - name: Install dependencies
       run: mvn install
       working-directory: ./OrangeHRM/orangehrm-test
@@ -45,4 +39,3 @@ jobs:
     #   uses: actions/upload-artifact@v2
     #   with:
     #     name: test-results
-    #     path: target/test-*.xml
