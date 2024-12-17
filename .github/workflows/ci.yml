@@ -24,13 +24,17 @@ jobs:
           java-version: '11'           # Specify Java version
           distribution: 'temurin'      # Specify JDK distribution (temurin from Adoptium)
 
-      # Step 3: Run Maven to build and test
+      # Step 3: Change directory to where the pom.xml file is located
+      - name: Change directory to pom.xml location
+        run: cd OrangeHRM/orangehrm-test  # Navigate to the folder containing pom.xml
+
+      # Step 4: Run Maven to build and test
       - name: Build and Run Tests with Maven
         run: |
           mvn clean install           # Install dependencies
           mvn test                    # Run tests using TestNG (Ensure testng.xml is configured)
 
-      # Step 4: Upload test results as artifacts
+      # Step 5: Upload test results as artifacts
       - name: Upload Test Results
         uses: actions/upload-artifact@v3
         with:
