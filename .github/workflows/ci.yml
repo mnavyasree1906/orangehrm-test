@@ -3,43 +3,43 @@ name: TestNG CI Workflow
 on:
   push:
     branches:
-      - main  # Trigger workflow on push to main branch
+      - main
   pull_request:
     branches:
-      - main  # Trigger workflow on pull requests to main branch
+      - main
 
 jobs:
   build:
-    runs-on: ubuntu-latest  # You can change to macOS or Windows if needed
+    runs-on: ubuntu-latest  # Or macOS or Windows if needed
 
     steps:
       # Step 1: Checkout the repository code
       - name: Checkout Repository
         uses: actions/checkout@v3
 
-      # Step 2: Set up JDK (e.g., Java 11)
+      # Step 2: Set up JDK (Java 11)
       - name: Set up JDK
         uses: actions/setup-java@v3
         with:
           java-version: '11'
-          distribution: 'adoptium'  # Use adoptium (formerly AdoptOpenJDK)
+          distribution: 'temurin'  # Correct distribution
 
       # Step 3: Set up Maven (if you haven't installed it globally in your project)
       - name: Set up Maven
         uses: actions/setup-java@v3
         with:
-          java-version: '11'  # Ensure correct Java version
-          maven-version: '3.8.1'  # Use the version of Maven that suits your project
+          java-version: '11'
+          maven-version: '3.8.1'
 
       # Step 4: Install dependencies and run TestNG tests using Maven
       - name: Build and Run Tests
         run: |
-          mvn clean install  # To install dependencies
-          mvn test           # To run TestNG tests (Make sure your testng.xml is correctly configured)
+          mvn clean install
+          mvn test
 
-      # Step 5: (Optional) Upload test results as artifacts
+      # Step 5: Upload test results as artifacts
       - name: Upload Test Results
-        uses: actions/upload-artifact@v3  # Updated to v3
+        uses: actions/upload-artifact@v3
         with:
           name: test-results
-          path: target/surefire-reports/  # TestNG results are typically saved here; modify as needed
+          path: target/surefire-reports/
