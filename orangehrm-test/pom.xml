@@ -27,9 +27,9 @@ jobs:
     # Step 3: Install dependencies using Maven
     - name: Install dependencies
       run: mvn install
-      working-directory: ./orangehrm-test  # Correct path to pom.xml file
+      working-directory: ./orangehrm-test  # This should point to the folder containing pom.xml
 
     # Step 4: Run tests with Maven (TestNG tests)
     - name: Run Tests
       run: mvn test
-      working-directory: ./orangehrm-test  # Correct path to pom.xml file
+      working-directory: ./orangehrm-test  # This should point to the folder containing pom.xml
