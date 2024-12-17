@@ -1,29 +1,45 @@
-name: Java CI Workflow
+name: TestNG CI Workflow
 
 on:
   push:
     branches:
-      - main
+      - main  # Trigger workflow on push to main branch
   pull_request:
     branches:
-      - main
+      - main  # Trigger workflow on pull requests to main branch
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest  # You can change to macOS or Windows if needed
 
     steps:
+      # Step 1: Checkout the repository code
       - name: Checkout Repository
         uses: actions/checkout@v3
 
+      # Step 2: Set up JDK (e.g., Java 11)
       - name: Set up JDK
         uses: actions/setup-java@v3
         with:
           java-version: '11'
-          distribution: 'temurin'  # Updated to 'temurin' from 'adoptopenjdk'
+          distribution: 'adoptium'  # Use adoptium (formerly AdoptOpenJDK)
 
-      - name: Build with Maven
-        run: mvn -f OrangeHRM/orangehrm-test/pom.xml clean install
+      # Step 3: Set up Maven (if you haven't installed it globally in your project)
+      - name: Set up Maven
+        uses: actions/setup-java@v3
+        with:
+          java-version: '11'  # Ensure correct Java version
+          maven-version: '3.8.1'  # Use the version of Maven that suits your project
 
-      - name: Run Tests
-        run: mvn -f OrangeHRM/orangehrm-test/pom.xml test
+      # Step 4: Install dependencies and run TestNG tests using Maven
+      - name: Build and Run Tests
+        run: |
+          mvn clean install  # To install dependencies
+          mvn test           # To run TestNG tests (Make sure your testng.xml is correctly configured)
+
+      # Step 5: (Optional) Upload test results as artifacts
+      - name: Upload Test Results
+        uses: actions/upload-artifact@v2
+        with:
+          name: test-results
+          path: target/surefire-reports/  # TestNG results are typically saved here; modify as needed
