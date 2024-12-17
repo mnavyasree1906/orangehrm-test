@@ -24,4 +24,4 @@ jobs:
 
     - name: Install dependencies and build
       run: mvn install
-      working-directory: ./OrangeHRM/orangehrm-test  # Adjust this path to the correct directory
+      working-directory: ./orangehrm-test  # Adjust this based on your directory structure
